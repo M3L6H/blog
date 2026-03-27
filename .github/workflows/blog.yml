@@ -26,4 +26,4 @@ jobs:
     - name: set-executable
       run: chmod +x bin/cblog
     - name: run
-      run: ./bin/my_cblog ./blog
+      run: ./bin/cblog ./blog
