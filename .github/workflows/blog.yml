@@ -14,13 +14,15 @@ on:
 jobs:
   execute:
     runs-on: ubuntu-latest
-
     steps:
     - name: download
-      uses: actions/download-artifact@v4
+      uses: dawidd6/action-download-artifact@v6
       with:
+        workflow: build.yml
         name: cblog
-        path: bin/
+        branch: main
+        workflow_conclusion: success
+        path: ./bin
     - name: set-executable
       run: chmod +x bin/cblog
     - name: run
