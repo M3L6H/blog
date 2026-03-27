@@ -1,0 +1,27 @@
+name: blog
+
+on:
+  push:
+    paths:
+      - 'blog/**'
+      - '.github/workflows/blog.yml'
+  pull_request:
+    paths:
+      - 'blog/**'
+      - '.github/workflows/blog.yml'
+  workflow_dispatch:
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: download
+      uses: actions/download-artifact@v4
+      with:
+        name: cblog
+        path: bin/
+    - name: set-executable
+      run: chmod +x bin/cblog
+    - name: run
+      run: ./bin/my_cblog ./blog
