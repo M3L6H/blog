@@ -19,7 +19,7 @@ size_t stradd(char** outs, const char* s) {
 }
 
 size_t strlen(const char* s) {
-    char* p = s;
+    const char* p = s;
     while (*(p++)) {}
     return p - s;
 }
