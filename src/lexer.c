@@ -2,7 +2,15 @@
 
 #include <stdio.h>
 
-Tok* lex(const char* doc) {
-  printf("%s", doc);
-  return NULL;
+Tok* lex() {
+    char* doc = NULL;
+    size_t len = 0;
+    
+    while (getline(&doc, &len, stdin) != -1) {
+        printf("%s\n", doc);
+    }
+    
+    free(doc)
+  
+    return NULL;
 }

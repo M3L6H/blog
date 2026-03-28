@@ -13,14 +13,7 @@ int main(int argc, char* argv[]) {
         return EXIT_ERR;
     }
     
-    char* doc = NULL;
-    size_t len = 0;
-    
-    while (getline(&doc, &len, stdin) != -1) {}
-    
-    lex(doc);
-    
-    free(doc);
+    lex();
  
     return EXIT_OK;
 }

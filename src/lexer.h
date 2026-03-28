@@ -7,6 +7,6 @@ typedef struct {
   unsigned int b;
 } Tok;
 
-Tok* lex(const char* doc);
+Tok* lex();
 
 #endif
