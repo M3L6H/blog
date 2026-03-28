@@ -1,6 +1,25 @@
 #include <stdio.h>
 
+#include "lexer.h"
+
+#define EXIT_ERR 1
+#define EXIT_OK 0
+#define USAGE "cat file.md | cblog"
+
 int main(int argc, char* argv[]) {
-    printf("Esther & Michael\n");
-    return 0;
+    if (argc != 1) {
+        printf("Usage: %s", USAGE);
+        return EXIT_ERR;
+    }
+    
+    char* doc = NULL;
+    size_t len = 0;
+    
+    while (getline(&line, &len, stdin) != -1) {}
+    
+    lex(doc);
+    
+    free(doc);
+ 
+    return EXIT_OK;
 }
