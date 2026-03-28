@@ -1,6 +1,7 @@
 #include "lexer.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 Tok* lex() {
     char* doc = NULL;
