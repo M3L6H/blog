@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
         return EXIT_ERR;
     }
     
-    lex();
+    lex(NULL);
  
     return EXIT_OK;
 }

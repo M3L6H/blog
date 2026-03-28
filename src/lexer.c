@@ -3,15 +3,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Tok* lex() {
-    char* doc = NULL;
+#include "strings.h"
+
+Tok* lex(char** outdoc) {
+    char* line = NULL;
     size_t len = 0;
     
-    while (getline(&doc, &len, stdin) != -1) {
-        printf("%s\n", doc);
+    while (getline(&line, &len, stdin) != -1) {
+        printf("%s", line);
     }
     
-    free(doc);
+    printf("%d vs %d\n", strlen(line), len);
+    len = stradd(&line, "blah");
+    printf("%d vs %d\n", strlen(line), len);
+    printf("%s", line);
+    
+    free(line); 
   
     return NULL;
 }

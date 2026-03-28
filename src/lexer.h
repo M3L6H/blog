@@ -3,10 +3,10 @@
 
 typedef struct {
   unsigned int t;
-  unsigned int a;
-  unsigned int b;
+  size_t a;
+  size_t b;
 } Tok;
 
-Tok* lex();
+Tok* lex(char** outdoc);
 
 #endif
