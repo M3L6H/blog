@@ -26,4 +26,7 @@ jobs:
     - name: set-executable
       run: chmod +x bin/cblog
     - name: run
-      run: ./bin/cblog ./blog
+      run: |-
+        find 'blog' -type f -print0 | while IFS=read -r -d '' f; do
+          cat "$f" | ./bin/cblog
+        done
