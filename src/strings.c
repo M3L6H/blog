@@ -4,6 +4,13 @@
 
 #include "mem.h"
 
+char* mkstr(const char* s) {
+    size_t n = strlen(s) + 1;
+    char* p = malloc(n * sizeof(char));
+    memcpy(p, s, n);
+    return p;
+}
+
 size_t stradd(char** outs, const char* s) {
     size_t a = strlen(*outs);
     if (!s) return a;

@@ -5,18 +5,13 @@
 
 #include "strings.h"
 
-Tok* lex(char** outdoc) {
+Tok* lex(char** outdoc, size_t* outlen) {
     char* line = NULL;
     size_t len = 0;
     
     while (getline(&line, &len, stdin) != -1) {
-        printf("%s", line);
+        *outlen = stradd(outdoc, line);
     }
-    
-    printf("%zu vs %zu\n", strlen(line), len);
-    len = stradd(&line, "blah");
-    printf("%zu vs %zu\n", strlen(line), len);
-    printf("%s", line);
     
     free(line); 
   

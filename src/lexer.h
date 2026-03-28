@@ -9,6 +9,6 @@ typedef struct {
   size_t b;
 } Tok;
 
-Tok* lex(char** outdoc);
+Tok* lex(char** outdoc, size_t* outlen);
 
 #endif

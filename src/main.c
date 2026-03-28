@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "lexer.h"
+#include "strings.h"
 
 #define EXIT_ERR 1
 #define EXIT_OK 0
@@ -11,8 +12,16 @@ int main(int argc, char* argv[]) {
         printf("Usage: %s", USAGE);
         return EXIT_ERR;
     }
+
+    char* doc = mkstr("");
+    size_t len = 0;
     
-    lex(NULL);
+    lex(&doc, &len);
+    
+    printf("%s\n", doc);
+    printf("len: %zu\n", len);
+    
+    free(doc);
  
     return EXIT_OK;
 }
