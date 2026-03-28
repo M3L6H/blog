@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "lexer.h"
 
@@ -15,7 +16,7 @@ int main(int argc, char* argv[]) {
     char* doc = NULL;
     size_t len = 0;
     
-    while (getline(&line, &len, stdin) != -1) {}
+    while (getline(&doc, &len, stdin) != -1) {}
     
     lex(doc);
     
