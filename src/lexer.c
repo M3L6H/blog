@@ -13,9 +13,9 @@ Tok* lex(char** outdoc) {
         printf("%s", line);
     }
     
-    printf("%d vs %d\n", strlen(line), len);
+    printf("%zu vs %zu\n", strlen(line), len);
     len = stradd(&line, "blah");
-    printf("%d vs %d\n", strlen(line), len);
+    printf("%zu vs %zu\n", strlen(line), len);
     printf("%s", line);
     
     free(line); 

@@ -4,7 +4,7 @@
 
 #include "mem.h"
 
-int stradd(char** outs, const char* s) {
+size_t stradd(char** outs, const char* s) {
     size_t a = strlen(*outs);
     if (!s) return a;
     size_t b = strlen(s);
@@ -18,7 +18,7 @@ int stradd(char** outs, const char* s) {
     return a + b;
 }
 
-size_t strlen(const char* s);
+size_t strlen(const char* s) {
     char* p = s;
     while (*(p++)) {}
     return p - s;
