@@ -11,9 +11,7 @@ size_t stradd(char** outs, const char* s) {
     if (!b) return a;
     char* p = realloc(*outs, (1 + a + b) * sizeof(char));
     if (!p) return a;
-    memcpy(p, *outs, a);
     memcpy(p + a, s, b + 1);
-    free(*outs);
     *outs = p;
     return a + b;
 }
