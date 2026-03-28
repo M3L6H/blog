@@ -11,7 +11,7 @@ Tok* lex() {
         printf("%s\n", doc);
     }
     
-    free(doc)
+    free(doc);
   
     return NULL;
 }
