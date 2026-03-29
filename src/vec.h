@@ -27,6 +27,8 @@
         if (!p) break;\
         d = p;\
         *(d++) = newcap;\
+    } else {\
+        d++;\
     }\
     ++(*(d++));\
     v = (void*) d;\
