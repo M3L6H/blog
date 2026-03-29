@@ -22,13 +22,13 @@ int main(int argc, char* argv[]) {
     free(doc);
     
     char* myvec = NULL;
-    MK_VEC(&myvec);
-    PUSH_VEC(&myvec, 'h');
-    PUSH_VEC(&myvec, 'e');
-    PUSH_VEC(&myvec, 'l');
-    PUSH_VEC(&myvec, 'l');
-    PUSH_VEC(&myvec, 'o');
-    PUSH_VEC(&myvec, '\0');
+    MK_VEC(myvec);
+    PUSH_VEC(myvec, 'h');
+    PUSH_VEC(myvec, 'e');
+    PUSH_VEC(myvec, 'l');
+    PUSH_VEC(myvec, 'l');
+    PUSH_VEC(myvec, 'o');
+    PUSH_VEC(myvec, '\0');
     
     size_t* d = (void*)myvec;
     printf("len: %zu ", *(--d));
