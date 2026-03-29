@@ -35,4 +35,7 @@
     v[len] = e;\
 } while (0)
 
+size_t veccap(const void* v);
+size_t veclen(const void* v);
+
 #endif
