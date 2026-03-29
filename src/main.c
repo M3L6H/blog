@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     free(doc);
     
     char* myvec = NULL;
-    MK_VEC(myvec);
+    MK_VEC(&myvec);
     PUSH_VEC(&myvec, 'h');
     PUSH_VEC(&myvec, 'e');
     PUSH_VEC(&myvec, 'l');

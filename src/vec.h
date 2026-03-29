@@ -9,12 +9,12 @@
     free(d - 2);\
 } while (0)
 
-#define MK_VEC(v) do {\
-    void* p = malloc(2 * sizeof(size_t) + sizeof(*v));\
-    size_t* d = (size_t*)p;\
+#define MK_VEC(vp) do {\
+    void* p = malloc(2 * sizeof(size_t) + sizeof(**vp));\
+    size_t* d = p;\
     *(d++) = 1;\
     *(d++) = 0;\
-    v = (void*)d;\
+    *vp = (void*)d;\
 } while (0)
 
 #define PUSH_VEC(vp, e) do {\
