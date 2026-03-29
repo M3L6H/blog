@@ -23,11 +23,11 @@
     size_t cap = *(--d);\
     if (len >= cap) {\
         size_t newcap = 2 * cap;\
-        size_t* p = realloc(d, 2 * sizeof(size_t) + newcap * sizeof(*v));\
+        size_t* p = realloc(d, 2 * sizeof(size_t) + newcap * sizeof(**vp));\
         if (!p) break;\
         d = p;\
+        *(d++) = newcap;\
     }\
-    *(d++) = newcap;\
     ++(*(d++));\
     *vp = (void*) d;\
     *vp[len] = e;\
