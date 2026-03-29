@@ -23,11 +23,11 @@ int main(int argc, char* argv[]) {
     
     char* myvec = NULL;
     MK_VEC(myvec);
-    PUSH_VEC(myvec, 'h');
-    PUSH_VEC(myvec, 'e');
-    PUSH_VEC(myvec, 'l');
-    PUSH_VEC(myvec, 'l');
-    PUSH_VEC(myvec, 'o');
+    //PUSH_VEC(myvec, 'h');
+    //PUSH_VEC(myvec, 'e');
+    //PUSH_VEC(myvec, 'l');
+    //PUSH_VEC(myvec, 'l');
+    //PUSH_VEC(myvec, 'o');
     PUSH_VEC(myvec, '\0');
     
     size_t* d = (void*)myvec;
