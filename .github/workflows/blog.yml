@@ -18,7 +18,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v6
     - name: download
-      uses: dawidd6/action-download-artifact@v19
+      uses: dawidd6/action-download-artifact@v20
       with:
         workflow: build.yml
         name: cblog
