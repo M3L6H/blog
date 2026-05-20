@@ -3,9 +3,9 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#define TOK_NL 0
-#define TOK_SP 1
-#define TOK_WD 2
+#define TOK_NL 1
+#define TOK_SP 2
+#define TOK_WD 3
 #define TOK_H1 10
 #define TOK_H2 11
 #define TOK_H3 12

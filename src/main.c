@@ -18,24 +18,17 @@ int main(int argc, char* argv[]) {
     char* doc = mkstr("");
     size_t len = 0;
     
-    lex(&doc, &len);
+    Tok* tokens = lex(&doc, &len);
     free(doc);
     
-    char* myvec = NULL;
-    MK_VEC(myvec);
-    PUSH_VEC(myvec, 'h');
-    PUSH_VEC(myvec, 'e');
-    PUSH_VEC(myvec, 'l');
-    PUSH_VEC(myvec, 'l');
-    PUSH_VEC(myvec, 'o');
-    PUSH_VEC(myvec, '\0');
-
-    printf("cap: %zu ", veccap(myvec));
-    printf("len: %zu ", veclen(myvec));
-    printf("%s\n", myvec);
-    printf("strlen: %zu\n", strlen(myvec));
+    printf("cap: %zu ", veccap(tokens);
+    printf("len: %zu ", veclen(tokens));
     
-    FREE_VEC(myvec);
+    for (int i = 0; i < veclen(tokens); ++i) {
+        printf("tok: %zu\n", tokens[i]->t);
+    }
+
+    FREE_VEC(tokens);
  
     return EXIT_OK;
 }
