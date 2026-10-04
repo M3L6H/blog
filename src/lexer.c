@@ -20,7 +20,7 @@ Tok* lex(char** outdoc, size_t* outlen) {
             size_t b = *outlen - llen + i;
             int tok = gettok(*outdoc, a, b, llen);
             if (tok) {
-                PUSH_VEC(tokens, (Tok){tok, a, b});
+                PUSH_VEC(tokens, ((Tok){tok, a, b}));
                 a = b + 1;
             } 
         }
