@@ -21,11 +21,11 @@ int main(int argc, char* argv[]) {
     Tok* tokens = lex(&doc, &len);
     free(doc);
     
-    printf("cap: %zu ", veccap(tokens);
+    printf("cap: %zu ", veccap(tokens));
     printf("len: %zu ", veclen(tokens));
     
     for (int i = 0; i < veclen(tokens); ++i) {
-        printf("tok: %zu\n", tokens[i]->t);
+        printf("tok: %zu\n", tokens[i].t);
     }
 
     FREE_VEC(tokens);
