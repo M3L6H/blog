@@ -6,6 +6,9 @@
 #include "strings.h"
 #include "vec.h"
 
+int gettok(const char* outdoc, const size_t a, const size_t b, const size_t llen);
+int isnotwd(const char c);
+
 Tok* lex(char** outdoc, size_t* outlen) {
     char* line = NULL;
     size_t len = 0;
