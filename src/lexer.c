@@ -27,7 +27,10 @@ Tok* lex(char** outdoc, size_t* outlen) {
                 a = b + 1;
             } 
         }
+        PUSH_VEC(tokens, ((Tok){TOK_NL, a, a}));
     }
+
+    PUSH_VEC(tokens, ((Tok){TOK_EOF, a, a}));
     
     free(line); 
   
@@ -37,7 +40,6 @@ Tok* lex(char** outdoc, size_t* outlen) {
 int gettok(const char* outdoc, const size_t a, const size_t b, const size_t llen) {
     char nextch = b + 1 >= llen ? '\0' : outdoc[b + 1];
  
-    if (outdoc[a] == '\n') return TOK_NL;
     if (outdoc[a] == ' ') {
         if (nextch != ' ') {
             return TOK_SP;
