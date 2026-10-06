@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     printf("len: %zu ", veclen(tokens));
     
     for (int i = 0; i < veclen(tokens); ++i) {
-        printf("tok: %zu\n", tokens[i].t);
+        printf("tok[ t: %zu, a: %zu, b: %zu ]\n", tokens[i].t, tokens[i].a, tokens[i].b);
     }
 
     FREE_VEC(tokens);
