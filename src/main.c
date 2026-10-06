@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     free(doc);
     
     printf("cap: %zu ", veccap(tokens));
-    printf("len: %zu ", veclen(tokens));
+    printf("len: %zu\n", veclen(tokens));
     
     for (int i = 0; i < veclen(tokens); ++i) {
         printf("tok[ t: %zu, a: %zu, b: %zu ]\n", tokens[i].t, tokens[i].a, tokens[i].b);
